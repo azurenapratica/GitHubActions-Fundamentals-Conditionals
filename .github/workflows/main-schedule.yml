@@ -1,4 +1,4 @@
-name: Treinamento GH Actions - Triggers Schedule
+name: Treinamento GH Actions - Triggers Schedule 
 
 on: 
  schedule:

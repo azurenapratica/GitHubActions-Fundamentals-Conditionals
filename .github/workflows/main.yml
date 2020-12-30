@@ -1,0 +1,12 @@
+name: Treinamento GH Actions - Triggers
+
+on:
+ schedule:
+  - cron:  '* * * * *'
+
+jobs:
+ build:
+   runs-on: ubuntu-latest
+   steps:
+    - name: Task 1 Exemplo
+      run: echo 'Task 1 Exemplo '

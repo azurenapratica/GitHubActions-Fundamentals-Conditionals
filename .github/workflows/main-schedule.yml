@@ -1,0 +1,13 @@
+name: Treinamento GH Actions - Triggers Schedule
+
+on: 
+ schedule:
+  # * is a special character in YAML so you have to quote this string
+  - cron:  '* * * * *'
+      
+jobs:
+ build:
+   runs-on: ubuntu-latest
+   steps:
+    - name: Task 1 Exemplo
+      run: echo 'Task 1 Exemplo '

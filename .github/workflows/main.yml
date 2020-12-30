@@ -6,6 +6,10 @@ on:
    - main
   paths-ignore: 
    - '**/main.yml'
+ schedule:
+  # * is a special character in YAML so you have to quote this string
+  - cron:  '* * * * *'
+      
  workflow_dispatch:
 
 jobs:

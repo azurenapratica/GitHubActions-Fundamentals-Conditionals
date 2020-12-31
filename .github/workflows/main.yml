@@ -7,7 +7,6 @@ on:
 jobs:
  build:
    runs-on: ubuntu-latest
-   if: failure()
    steps:
     - name: Task 1 Exemplo
       if: success()
@@ -16,6 +15,9 @@ jobs:
     - name: Task 2 Exemplo
       if: failure()
       run: echo 'Task 2 Exemplo '
+      
+    - name: Força o Step falhar
+      run: exit 1      
     
     - name: Task 3 Exemplo
       if: success()
@@ -24,3 +26,10 @@ jobs:
     - name: Task 4 Exemplo
       if: success()
       run: echo 'Task 4 Exemplo '                  
+ deploy:
+   runs-on: ubuntu-latest
+   if: success()
+   steps:
+    - name: Task 1 Exemplo
+      if: success()
+      run: echo 'Task 1 Exemplo '              

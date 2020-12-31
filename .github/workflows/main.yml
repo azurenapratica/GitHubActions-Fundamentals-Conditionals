@@ -19,16 +19,15 @@ jobs:
     - name: Força o Step falhar
       run: exit 1      
     
-    - name: Task 3 Exemplo
+    - name: Enviar Notificação Sucesso
       if: success()
-      run: echo 'Task 3 Exemplo '
+      run: echo 'Enviar Notificação Sucesso'
     
     - name: Task 4 Exemplo
-      if: success()
-      run: echo 'Task 4 Exemplo '                  
+      if: failure()
+      run: echo 'Enviar Notificação Erro'                  
  deploy:
    runs-on: ubuntu-latest
-   if: failure()
    needs: [build]
    steps:
     - name: Task 1 Exemplo

@@ -3,10 +3,23 @@ name: Treinamento GH Actions - Triggers
 on:
  schedule:
   - cron:  '* * * * *'
-
+ workflow_dispatch:
 jobs:
  build:
    runs-on: ubuntu-latest
    steps:
     - name: Task 1 Exemplo
+      if: success()
       run: echo 'Task 1 Exemplo '
+    
+    - name: Task 2 Exemplo
+      if: success()
+      run: echo 'Task 2 Exemplo '
+    
+    - name: Task 3 Exemplo
+      if: success()
+      run: echo 'Task 3 Exemplo '
+    
+    - name: Task 4 Exemplo
+      if: success()
+      run: echo 'Task 4 Exemplo '                  

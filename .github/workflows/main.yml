@@ -28,7 +28,8 @@ jobs:
       run: echo 'Task 4 Exemplo '                  
  deploy:
    runs-on: ubuntu-latest
-   if: success()
+   if: failure()
+   needs: [build]
    steps:
     - name: Task 1 Exemplo
       if: success()

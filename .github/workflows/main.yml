@@ -9,11 +9,9 @@ jobs:
    runs-on: ubuntu-latest
    steps:
     - name: Task 1 Exemplo
-      if: success()
       run: echo 'Task 1 Exemplo '
     
     - name: Task 2 Exemplo
-      if: failure()
       run: echo 'Task 2 Exemplo '
       
     - name: Força o Step falhar

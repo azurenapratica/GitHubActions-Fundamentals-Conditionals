@@ -13,10 +13,7 @@ jobs:
     
     - name: Task 2 Exemplo
       run: echo 'Task 2 Exemplo '
-      
-    - name: Força o Step falhar
-      run: exit 1      
-    
+         
     - name: Enviar Notificação Sucesso
       if: success()
       run: echo 'Enviar Notificação Sucesso'

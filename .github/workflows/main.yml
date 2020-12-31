@@ -23,7 +23,7 @@ jobs:
       if: success()
       run: echo 'Enviar Notificação Sucesso'
     
-    - name: Task 4 Exemplo
+    - name: Enviar Notificação Falha
       if: failure()
       run: echo 'Enviar Notificação Erro'                  
  deploy:

@@ -13,6 +13,9 @@ jobs:
     
     - name: Task 2 Exemplo
       run: echo 'Task 2 Exemplo '
+      
+    - name: Task 3 Exemplo
+      run: echo ${{ github.ref	 }}      
          
     - name: Enviar Notificação Sucesso
       if: success()

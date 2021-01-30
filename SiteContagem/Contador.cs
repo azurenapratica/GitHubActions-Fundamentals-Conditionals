@@ -29,7 +29,7 @@ namespace SiteContagem
 
         public void Incrementar()
         {
-            _valorAtual += 1;
+            _valorAtual += 2;
         }
     }
 }

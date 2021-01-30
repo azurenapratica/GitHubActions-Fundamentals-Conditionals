@@ -1,6 +1,9 @@
 name: Treinamento GH Actions - Triggers
 
 on:
+ push:
+  branches: 
+   - master
  schedule:
   - cron:  '* * * * *'
  workflow_dispatch:
@@ -24,7 +27,15 @@ jobs:
     - name: Enviar Notificação Falha
       if: failure()
       run: echo 'Enviar Notificação Erro'                  
- deploy:
+ deploy-dev:
+   if: github.ref == 'refs/heads/developer'
+   runs-on: ubuntu-latest
+   needs: [build]
+   steps:
+    - name: Task 1 Exemplo
+      if: success()
+      run: echo 'Task 1 Exemplo '                    
+ deploy-prod:
    if: github.ref == 'refs/heads/master'
    runs-on: ubuntu-latest
    needs: [build]

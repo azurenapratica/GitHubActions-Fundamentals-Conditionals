@@ -1,6 +1,9 @@
 name: Treinamento GH Actions - Triggers
 
 on:
+ push:
+  branches: 
+   - master
  schedule:
   - cron:  '* * * * *'
  workflow_dispatch:
